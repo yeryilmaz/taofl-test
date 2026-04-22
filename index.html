@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sahabe App - User Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/1.png" alt="Sahabe Logo" class="nav-logo"> <span id="nav-brand">Sahabe Guidelines</span>
+        </div>
+        <div class="lang-selector">
+            <button id="btn-en" class="active">EN</button>
+            <button id="btn-tr">TR</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <h1 id="title">Sahabe User Guide</h1>
+            <p id="subtitle">Everything you need to know to get started with the Sahabe app.</p>
+            
+            <div class="download-card">
+                <div class="app-info">
+                    <i class="fa-brands fa-apple apple-icon"></i>
+                    <div>
+                        <h3 id="ios-beta">iOS Beta Access</h3>
+                    </div>
+                </div>
+                <a href="https://testflight.apple.com/join/zxVEdSqY" target="_blank" class="download-btn">
+                    <span id="download-text">Download on TestFlight</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="content-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-target="getting-started" id="tab-1">Getting Started</button>
+                <button class="tab-btn" data-target="full-guide" id="tab-full-guide">Full Guide</button>
+                <button class="tab-btn" data-target="features" id="tab-2">Features</button>
+                <button class="tab-btn" data-target="faq" id="tab-3">FAQ</button>
+            </div>
+
+            <div class="tab-content active" id="getting-started">
+                <h2 id="gs-title">How to Install</h2>
+                <ol class="steps">
+                    <li>
+                        <div class="step-icon">1</div>
+                        <div class="step-text">
+                            <h4 id="step1-title">Install TestFlight</h4>
+                            <p id="step1-desc">Download Apple's TestFlight app from the App Store on your iPhone or iPad.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-icon">2</div>
+                        <div class="step-text">
+                            <h4 id="step2-title">Join Beta</h4>
+                            <p id="step2-desc">Tap the download link above and accept the invitation to join the Sahabe beta program.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-icon">3</div>
+                        <div class="step-text">
+                            <h4 id="step3-title">Install Sahabe</h4>
+                            <p id="step3-desc">Tap 'Install' in the TestFlight app to download Sahabe to your device.</p>
+                        </div>
+                    </li>
+                </ol>
+                <div class="docs-download">
+                    <h3 id="docs-title">Detailed Documentation</h3>
+                    <div class="docs-links">
+                        <a href="./Sahabe-App-Guide.docx" class="doc-btn" download><i class="fa-regular fa-file-word"></i> English Guide</a>
+                        <a href="./Sahabe%20Kullan%C4%B1m%20K%C4%B1lavuzu.docx" class="doc-btn" download><i class="fa-regular fa-file-word"></i> Türkçe Kılavuz</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Guide Tab Content -->
+            <div class="tab-content" id="full-guide">
+                <div class="guide-container" id="guide-en-content">
+                    <h2>Sahabe App: User Guide</h2>
+                    <p><em>Welcome to the world of Sahabe! To use our application most efficiently on your iOS device, you can follow the steps below.</em></p>
+                    <div class="guide-images"><img src="images/1.png" alt="Intro"></div>
+
+                    <h3>1. Installation and Registration Process</h3>
+                    <div class="guide-images">
+                        <img src="images/2.png" alt="Installation 1">
+                        <img src="images/3.png" alt="Installation 2">
+                    </div>
+                    <ul>
+                        <li><strong>TestFlight Installation:</strong> Our application is currently in the testing phase. First, you need to download and install the TestFlight app from the App Store.</li>
+                        <li><strong>Login and Registration:</strong> When you open the app, you will see three different secure registration options:
+                            <ul>
+                                <li>Register with an Email address.</li>
+                                <li>Quick login with a Google account.</li>
+                                <li>One-click login with Apple ID.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>2. Navigation and Sections</h3>
+                    <div class="guide-images"><img src="images/4.png" alt="Navigation"></div>
+                    <p>You can navigate through the app using the Navigation Bar (Navbar) located at the bottom of the screen.</p>
+                    
+                    <h4>I. Home Page</h4>
+                    <div class="guide-images"><img src="images/5.png" alt="Home Page"></div>
+                    <ul>
+                        <li><strong>Dynamic List:</strong> The home page lists 5 randomly selected Sahabe.</li>
+                        <li><strong>Refresh:</strong> Every time you return to the home page from another section, the list refreshes with different names.</li>
+                        <li><strong>Interaction:</strong> You can click on a Sahabe's image to learn about them and start a conversation.</li>
+                    </ul>
+
+                    <h4>II. Explore and Search (All Sahabe)</h4>
+                    <div class="guide-images"><img src="images/6.png" alt="Explore"></div>
+                    <ul>
+                        <li><strong>Full List:</strong> You can view all Sahabe registered in the system here.</li>
+                        <li><strong>Search:</strong> Use the search bar at the top to find a specific Sahabe by name.</li>
+                        <li><strong>Details and Chat:</strong> Clicking on a Sahabe card shows general information, and the "Start Chat" button directs you to the chat screen.</li>
+                    </ul>
+
+                    <h4>III. Sponsorship Page</h4>
+                    <div class="guide-images">
+                        <img src="images/7.png" alt="Sponsorship 1">
+                        <img src="images/8.png" alt="Sponsorship 2">
+                    </div>
+                    <ul>
+                        <li><strong>Supporting:</strong> You can select a Sahabe you wish to sponsor.</li>
+                        <li><strong>Options:</strong> Sahabe cards feature "Sponsor" and "More" buttons.</li>
+                        <li><strong>Process:</strong> You can sponsor directly or use the button at the bottom of the page after reviewing the details.</li>
+                    </ul>
+
+                    <h4>IV. Subscription and Credit Transactions</h4>
+                    <div class="guide-images">
+                        <img src="images/9.png" alt="Subscription 1">
+                        <img src="images/10.png" alt="Subscription 2">
+                    </div>
+                    <ul>
+                        <li><strong>Plans:</strong> You can find all subscription plans and details within the cards on this page.</li>
+                        <li><strong>Credit System:</strong> Through subscriptions, you earn the credits required to chat with Sahabe (credits decrease during live chats).</li>
+                        <li><strong>Buying Credits:</strong> If you wish to increase your credits, you can purchase additional credits via the payment options at the bottom of the page.</li>
+                    </ul>
+
+                    <h3>3. Chat Features and Usage</h3>
+                    <div class="guide-images"><img src="images/11.png" alt="Chat Features"></div>
+                    
+                    <h4>Written Chat (Chat Screen)</h4>
+                    <div class="guide-images">
+                        <img src="images/12.png" alt="Written Chat 1">
+                        <img src="images/13.png" alt="Written Chat 2">
+                    </div>
+                    <ul>
+                        <li><strong>Q&A:</strong> You can type your questions in the input bar at the bottom.</li>
+                        <li><strong>View:</strong> You can enlarge the area by swiping the chat window upwards.</li>
+                        <li><strong>Voice Input:</strong> Use the microphone icon to ask your questions verbally.</li>
+                        <li><strong>Language Settings:</strong> Change the chat language using the language option at the bottom of the screen.</li>
+                        <li><strong>History:</strong> Use the button in the top right to view your chat history specific to that Sahabe.</li>
+                    </ul>
+
+                    <h4>Live Chat</h4>
+                    <div class="guide-images"><img src="images/14.png" alt="Live Chat"></div>
+                    <ul>
+                        <li><strong>Access:</strong> Switch by clicking the "Live" button at the bottom right of the screen.</li>
+                        <li><strong>Voice Communication:</strong> Ask your questions directly by speaking.</li>
+                        <li><strong>Control Bar:</strong> Use the bar on the right to mute the microphone, pause the chat, or end the session.</li>
+                    </ul>
+
+                    <h3>4. Profile and General Menu (Hamburger Menu)</h3>
+                    <div class="guide-images">
+                        <img src="images/15.png" alt="Profile 1">
+                        <img src="images/16.png" alt="Profile 2">
+                    </div>
+                    <ul>
+                        <li><strong>Settings:</strong> Track your profile information, active subscription plan, and remaining credit amount.</li>
+                        <li><strong>Content and Support:</strong> Access full chat history, FAQ, Contact Us, About Us, Privacy Policy, Terms of Service, and Warnings.</li>
+                    </ul>
+
+                    <h3>5. Feedback & Support</h3>
+                    <div class="guide-images">
+                        <img src="images/17.png" alt="Feedback 1">
+                        <img src="images/18.png" alt="Feedback 2">
+                    </div>
+                    <p>Your feedback is highly valuable to us. To share your experience:</p>
+                    <ul>
+                        <li>You can send us your feedback by clicking the <strong>"Feedback"</strong> button located in the bottom right corner of the screen.</li>
+                        <li>If you wish, you may attach <strong>screenshots</strong> to your feedback to provide more detailed information.</li>
+                        <li>We specifically welcome your comments on:
+                            <ul>
+                                <li>Ease of registration and login.</li>
+                                <li>Quality of content in conversations with Sahaba.</li>
+                                <li>Navigation speed and transitions between pages.</li>
+                                <li>Performance of the Live chat feature.</li>
+                                <li>General design and user-friendliness.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="guide-container" id="guide-tr-content" style="display: none;">
+                    <h2>Sahabe Uygulaması: Kullanım Kılavuzu</h2>
+                    <p><em>Sahabe dünyasına yolculuk yapmaya hoş geldiniz! Uygulamamızı iOS cihazınızda en verimli şekilde kullanabilmeniz için aşağıdaki adımları takip edebilirsiniz.</em></p>
+                    <div class="guide-images"><img src="images/1.png" alt="Giriş"></div>
+
+                    <h3>1. Kurulum ve Kayıt Süreci</h3>
+                    <div class="guide-images">
+                        <img src="images/2.png" alt="Kurulum 1">
+                        <img src="images/3.png" alt="Kurulum 2">
+                    </div>
+                    <ul>
+                        <li><strong>TestFlight Yüklemesi:</strong> Uygulamamız şu an test aşamasındadır. Öncelikle App Store üzerinden TestFlight uygulamasını indirip kurmanız gerekmektedir.</li>
+                        <li><strong>Giriş ve Kayıt:</strong> Uygulamayı açtığınızda karşınıza üç farklı güvenli kayıt seçeneği çıkacaktır:
+                            <ul>
+                                <li>E-posta adresi ile kayıt.</li>
+                                <li>Google hesabı ile hızlı giriş.</li>
+                                <li>Apple ID ile tek tıkla giriş.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>2. Navigasyon ve Bölümler</h3>
+                    <div class="guide-images"><img src="images/4.png" alt="Navigasyon"></div>
+                    <p>Uygulama içerisinde geçişlerinizi, ekranın alt kısmında yer alan <strong>Navigasyon Çubuğu (Navbar)</strong> üzerinden gerçekleştirebilirsiniz.</p>
+                    
+                    <h4>I. Ana Sayfa (Home Page)</h4>
+                    <div class="guide-images"><img src="images/5.png" alt="Ana Sayfa"></div>
+                    <ul>
+                        <li><strong>Dinamik Liste:</strong> Ana sayfada <strong>rastgele seçilen 5 Sahabe</strong> listelenir. Başka bir sayfadan ana sayfaya her döndüğünüzde liste yenilenerek karşınıza farklı isimler çıkar.</li>
+                        <li><strong>Etkileşim:</strong> Sahabe görseline tıklayarak o sahabe hakkında bilgi sahibi olabilir ve sohbete başlayabilirsiniz.</li>
+                    </ul>
+
+                    <h4>II. Keşfet ve Arama (Tüm Sahabeler)</h4>
+                    <div class="guide-images"><img src="images/6.png" alt="Keşfet"></div>
+                    <ul>
+                        <li><strong>Tüm Liste:</strong> Sistemde kayıtlı tüm sahabeleri burada görebilirsiniz.</li>
+                        <li><strong>Arama:</strong> Üst kısımdaki arama barını kullanarak dilediğiniz sahabenin ismini aratabilirsiniz.</li>
+                        <li><strong>Detay ve Sohbet:</strong> Sahabe kartına tıkladığınızda genel bilgilerine ulaşabilir, <strong>"Sohbete Başla"</strong> butonu ile chat ekranına yönlendirilirsiniz.</li>
+                    </ul>
+
+                    <h4>III. Sponsorluk Sayfası</h4>
+                    <div class="guide-images">
+                        <img src="images/7.png" alt="Sponsorluk 1">
+                        <img src="images/8.png" alt="Sponsorluk 2">
+                    </div>
+                    <ul>
+                        <li><strong>Destek Olma:</strong> Sponsor olmak istediğiniz sahabeyi seçebilirsiniz.</li>
+                        <li><strong>Seçenekler:</strong> Sahabe kartları üzerinde "Sponsor Ol" ve "Daha Fazla" butonları yer alır.</li>
+                        <li><strong>Süreç:</strong> Doğrudan sponsor olabilir veya detayları inceledikten sonra sayfa sonundaki butonu kullanabilirsiniz.</li>
+                    </ul>
+
+                    <h4>IV. Abonelik ve Kredi İşlemleri</h4>
+                    <div class="guide-images">
+                        <img src="images/9.png" alt="Abonelik 1">
+                        <img src="images/10.png" alt="Abonelik 2">
+                    </div>
+                    <ul>
+                        <li><strong>Planlar:</strong> Tüm abonelik planlarını ve detaylarını bu sayfadaki kartlar içerisinde bulabilirsiniz.</li>
+                        <li><strong>Kredi Sistemi:</strong> Abonelik sayesinde sahabe ile sohbet etmek için gerekli kredileri kazanmış olursunuz (Canlı sohbetlerde krediniz azalacaktır).</li>
+                        <li><strong>Kredi Satın Alma:</strong> Kredinizi artırmak isterseniz, sayfanın altındaki ödeme seçenekleri üzerinden ek kredi satın alabilirsiniz.</li>
+                    </ul>
+
+                    <h3>3. Sohbet Özellikleri ve Kullanım</h3>
+                    <div class="guide-images"><img src="images/11.png" alt="Sohbet Özellikleri"></div>
+                    
+                    <h4>Yazılı Sohbet (Chat Screen)</h4>
+                    <div class="guide-images">
+                        <img src="images/12.png" alt="Yazılı Sohbet 1">
+                        <img src="images/13.png" alt="Yazılı Sohbet 2">
+                    </div>
+                    <ul>
+                        <li><strong>Soru-Cevap:</strong> Alt kısımdaki giriş barından sorularınızı yazabilirsiniz.</li>
+                        <li><strong>Görünüm:</strong> Sohbet penceresini yukarı kaydırarak alanı büyütebilirsiniz.</li>
+                        <li><strong>Sesli Giriş:</strong> Mikrofon ikonunu kullanarak sorularınızı konuşarak iletebilirsiniz.</li>
+                        <li><strong>Dil Ayarı:</strong> Sohbet dilini ekranın altındaki dil seçeneğiyle değiştirebilirsiniz.</li>
+                        <li><strong>Geçmiş:</strong> Sağ üstteki buton ile o sahabeye özel sohbet geçmişinizi görebilirsiniz.</li>
+                    </ul>
+
+                    <h4>Canlı Sohbet (Live Chat)</h4>
+                    <div class="guide-images"><img src="images/14.png" alt="Canlı Sohbet"></div>
+                    <ul>
+                        <li><strong>Geçiş:</strong> Ekranın sağ altındaki <strong>"Live"</strong> butonuna tıklayarak geçiş yapabilirsiniz.</li>
+                        <li><strong>Sesli İletişim:</strong> Sorularınızı doğrudan konuşarak sorabilirsiniz.</li>
+                        <li><strong>Kontrol Barı:</strong> Sağ taraftaki bar üzerinden mikrofonu kapatabilir, sohbeti duraklatabilir veya sonlandırabilirsiniz.</li>
+                    </ul>
+
+                    <h3>4. Profil ve Genel Menü (Hamburger Menü)</h3>
+                    <div class="guide-images">
+                        <img src="images/15.png" alt="Profil 1">
+                        <img src="images/16.png" alt="Profil 2">
+                    </div>
+                    <p>Her sayfanın sağ üst köşesinde bulunan <strong>Hamburger Menü (≡)</strong> simgesi üzerinden şu bölümlere ulaşabilirsiniz:</p>
+                    <ul>
+                        <li><strong>Ayarlar:</strong> Profil bilgileriniz, aktif abonelik planınız ve kalan kredi miktarınızı buradan takip edebilirsiniz.</li>
+                        <li><strong>İçerik ve Destek:</strong> Tüm sohbet geçmişi, SSS, Bize Ulaşın, Hakkımızda, Gizlilik Politikası, Hizmet Şartları ve Uyarılar.</li>
+                    </ul>
+
+                    <h3>5. Geri Bildirim ve Destek</h3>
+                    <div class="guide-images">
+                        <img src="images/17.png" alt="Geri Bildirim 1">
+                        <img src="images/18.png" alt="Geri Bildirim 2">
+                    </div>
+                    <p>Uygulama hakkındaki görüşleriniz bizim için çok değerlidir. Deneyimlerinizi paylaşmak için:</p>
+                    <ul>
+                        <li>Ekranın sağ alt köşesinde bulunan <strong>"Feedback"</strong> butonuna tıklayarak geri bildirimlerinizi bize iletebilirsiniz.</li>
+                        <li>Geri bildiriminize dilerseniz <strong>ekran görüntüsü</strong> ekleyerek yaşadığınız durumları daha detaylı bir şekilde raporlayabilirsiniz.</li>
+                        <li>Uygulama gelişimi için özellikle şu 5 konu başlığındaki yorumlarınızı bekliyoruz:
+                            <ul>
+                                <li>Kayıt ve giriş kolaylığı.</li>
+                                <li>Sahabelerle yapılan sohbetlerin içerik kalitesi.</li>
+                                <li>Sayfalar arası geçiş ve navigasyon hızı.</li>
+                                <li>Canlı sohbet (Live) özelliğinin performansı.</li>
+                                <li>Genel tasarım ve kullanım kolaylığı.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="features">
+                <h2 id="feat-title">Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-comments"></i>
+                        <h4 id="feat1-title">Real-time Chat</h4>
+                        <p id="feat1-desc">Communicate instantly with a modern and intuitive chat interface.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-microphone"></i>
+                        <h4 id="feat2-title">Voice Messages</h4>
+                        <p id="feat2-desc">Send and receive crystal clear voice messages effortlessly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4 id="feat3-title">Secure & Private</h4>
+                        <p id="feat3-desc">Your conversations are protected with industry-standard security.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="faq">
+                <h2 id="faq-title">Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span id="faq1-q">Do I need an account to use the app?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p id="faq1-a">Yes, you can sign in easily using your Google or Apple account.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span id="faq2-q">Is the app available on Android?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p id="faq2-a">Currently, we are focusing on the iOS beta release. An Android version will be available in the future.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span id="faq3-q">How do I report a bug?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p id="faq3-a">You can report bugs directly through the TestFlight app by taking a screenshot and sharing your feedback.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footer-text">&copy; 2026 Sahabe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
