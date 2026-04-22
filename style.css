@@ -208,10 +208,12 @@ body {
     padding: 0.8rem 1.5rem;
     border-radius: 12px;
     font-weight: 600;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     transition: background 0.3s ease;
+    word-break: break-word;
 }
 
 .download-btn:hover {
@@ -481,18 +483,30 @@ body {
 
 .guide-images {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     margin: 1.5rem 0;
     overflow-x: auto;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .guide-images img {
-    max-width: 100%;
+    flex: 0 0 80%;
+    max-width: 80%;
     height: auto;
     border-radius: 12px;
     border: 1px solid var(--border);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+}
+
+/* On larger screens, don't force partial visibility if there's space */
+@media (min-width: 769px) {
+    .guide-images img {
+        flex: 0 0 auto;
+        max-width: 45%;
+    }
 }
 
 footer {
@@ -511,10 +525,23 @@ footer {
         border-radius: 0;
     }
     .container { padding: 2rem 1rem; }
-    .hero h1 { font-size: 2rem; }
-    .download-card { flex-direction: column; gap: 1.5rem; text-align: center; padding: 1.5rem; }
-    .app-info { flex-direction: column; text-align: center; }
-    .docs-links { flex-direction: column; }
-    .tab-content { padding: 2rem 1rem; }
+    .hero h1 { font-size: 1.8rem; }
+    .download-card { 
+        flex-direction: column; 
+        gap: 1.2rem; 
+        text-align: center; 
+        padding: 1.2rem; 
+        width: 100%;
+        max-width: 100%;
+    }
+    .app-info { flex-direction: column; text-align: center; gap: 0.8rem; }
+    .app-info i { font-size: 2.5rem; }
+    .download-btn { 
+        width: 100%; 
+        padding: 0.8rem 1rem; 
+        font-size: 0.95rem;
+    }
+    .docs-links { flex-direction: column; gap: 0.8rem; }
+    .tab-content { padding: 1.5rem 1rem; }
     .guide-images { padding-bottom: 1rem; }
 }
