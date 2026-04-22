@@ -32,6 +32,7 @@ const translations = {
         "faq2-a": "Currently, we are focusing on the iOS beta release. An Android version will be available in the future.",
         "faq3-q": "How do I report a bug?",
         "faq3-a": "You can report bugs directly through the TestFlight app by taking a screenshot and sharing your feedback.",
+        "free-notice-text": "The test version of our application is completely free. No charges will be applied.",
         "footer-text": "&copy; 2026 Sahabe. All rights reserved."
     },
     tr: {
@@ -67,6 +68,7 @@ const translations = {
         "faq2-a": "Şu anda iOS beta sürümüne odaklanıyoruz. Gelecekte bir Android sürümü de mevcut olacak.",
         "faq3-q": "Bir hatayı nasıl bildirebilirim?",
         "faq3-a": "Ekran görüntüsü alıp geri bildiriminizi paylaşarak hataları doğrudan TestFlight uygulaması üzerinden bildirebilirsiniz.",
+        "free-notice-text": "Uygulamamızın test sürümü tamamen ücretsizdir. Herhangi bir ücret talep edilmeyecektir.",
         "footer-text": "&copy; 2026 Sahabe. Tüm hakları saklıdır."
     }
 };

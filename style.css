@@ -149,7 +149,27 @@ body {
     font-size: 1.2rem;
     color: var(--text-muted);
     max-width: 600px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 2rem auto;
+}
+
+.free-notice {
+    background: rgba(244, 63, 94, 0.1);
+    border: 1px solid #f43f5e;
+    border-radius: 16px;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #f43f5e;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 0 20px rgba(244, 63, 94, 0.1);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.free-notice i {
+    font-size: 1.1rem;
 }
 
 .download-card {
