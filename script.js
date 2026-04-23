@@ -29,10 +29,8 @@ const translations = {
         "faq-title": "Frequently Asked Questions",
         "faq1-q": "Do I need an account to use the app?",
         "faq1-a": "Yes, you can sign in easily using your Google or Apple account.",
-        "faq2-q": "Is the app available on Android?",
-        "faq2-a": "Currently, we are focusing on the iOS beta release. An Android version will be available in the future.",
-        "faq3-q": "How do I report a bug?",
-        "faq3-a": "You can report bugs directly through the TestFlight app by taking a screenshot and sharing your feedback.",
+        "faq2-q": "How do I report a bug?",
+        "faq2-a": "You can report bugs directly through the TestFlight app by taking a screenshot and sharing your feedback.",
         "free-notice-text": "The test version of our application is completely free. No charges will be applied."
     },
     tr: {
@@ -65,10 +63,8 @@ const translations = {
         "faq-title": "Sıkça Sorulan Sorular",
         "faq1-q": "Uygulamayı kullanmak için bir hesaba ihtiyacım var mı?",
         "faq1-a": "Evet, Google veya Apple hesabınızı kullanarak kolayca giriş yapabilirsiniz.",
-        "faq2-q": "Uygulama Android'de mevcut mu?",
-        "faq2-a": "Şu anda iOS beta sürümüne odaklanıyoruz. Gelecekte bir Android sürümü de mevcut olacak.",
-        "faq3-q": "Bir hatayı nasıl bildirebilirim?",
-        "faq3-a": "Ekran görüntüsü alıp geri bildiriminizi paylaşarak hataları doğrudan TestFlight uygulaması üzerinden bildirebilirsiniz.",
+        "faq2-q": "Bir hatayı nasıl bildirebilirim?",
+        "faq2-a": "Ekran görüntüsü alıp geri bildiriminizi paylaşarak hataları doğrudan TestFlight uygulaması üzerinden bildirebilirsiniz.",
         "free-notice-text": "Uygulamamızın test sürümü tamamen ücretsizdir. Herhangi bir ücret talep edilmeyecektir."
     }
 };
