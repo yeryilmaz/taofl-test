@@ -529,14 +529,7 @@ body {
     }
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-muted);
-    border-top: 1px solid var(--border);
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
-}
+
 
 @media (max-width: 768px) {
     .navbar {
