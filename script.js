@@ -151,32 +151,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Version fetching logic
     const fetchLatestVersion = async () => {
         try {
-            // Using a CORS proxy to fetch TestFlight metadata
-            // Note: In production, it's better to use a dedicated backend or build-time script
-            const tfUrl = 'https://testflight.apple.com/join/zxVEdSqY';
-            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(tfUrl)}`;
+            const response = await fetch('version.json');
+            if (!response.ok) throw new Error('version.json bulunamadı');
             
-            const response = await fetch(proxyUrl);
             const data = await response.json();
-            const html = data.contents;
             
-            // Try to find version and build in the HTML
-            // Apple often embeds this in a JSON blob or specific meta tags
-            // For now, we'll look for common patterns or use fallbacks
-            
-            // Example pattern matching (this may need adjustment based on Apple's exact HTML)
-            const versionMatch = html.match(/version\s*[:=]\s*["']([^"']+)["']/i);
-            const buildMatch = html.match(/build\s*[:=]\s*["']([^"']+)["']/i);
-            
-            if (versionMatch && versionMatch[1]) {
-                document.getElementById('version-number').textContent = versionMatch[1];
+            if (data.version) {
+                document.getElementById('version-number').textContent = data.version;
             }
-            if (buildMatch && buildMatch[1]) {
-                document.getElementById('build-label').textContent = `Build ${buildMatch[1]}`;
+            if (data.build) {
+                // Update translation objects so language switches preserve the build number
+                translations.en["build-label"] = `Build ${data.build}`;
+                translations.tr["build-label"] = `Yapı ${data.build}`;
+                
+                // Update current display
+                const buildEl = document.getElementById('build-label');
+                if (buildEl) {
+                    const currentLang = document.getElementById('btn-en').classList.contains('active') ? 'en' : 'tr';
+                    buildEl.textContent = translations[currentLang]["build-label"];
+                }
             }
-            
-            // Note: If the above parsing fails (as Apple changes layout often), 
-            // the hardcoded values in index.html will remain as defaults.
+            if (data.expiresInDays) {
+                document.getElementById('days-left').textContent = data.expiresInDays;
+            }
         } catch (error) {
             console.error('Error fetching version info:', error);
         }
