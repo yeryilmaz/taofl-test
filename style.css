@@ -319,31 +319,41 @@ body {
 
 .guide-images {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 3rem 0;
-    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    justify-content: flex-start;
+    align-items: center;
     background: #FDFBF7;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 24px;
     border: 1px dashed var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+}
+
+.guide-images::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 }
 
 .guide-images img {
-    max-width: 240px;
-    width: 100%;
+    width: 260px;
     height: auto;
     border-radius: 30px;
     border: 6px solid #1A1A1A; /* Mock phone frame */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     background: white;
-    flex: 0 1 240px;
+    flex: 0 0 260px;
+    scroll-snap-align: center;
 }
 
-.guide-images img:only-child {
-    max-width: 280px;
+.guide-images:not(:has(img:nth-child(2))) {
+    justify-content: center;
 }
+
 
 .guide-images img:hover {
     transform: translateY(-10px);
@@ -415,8 +425,8 @@ body {
     }
     
     .container {
-        margin-top: 1rem;
-        padding: 2rem 1.2rem; /* Reduced padding since switcher is now relative */
+        margin-top: 0.5rem;
+        padding: 1.5rem 1.2rem; /* Reduced padding */
         border-radius: 20px;
         width: 96%;
     }
@@ -493,31 +503,28 @@ body {
     }
 
     .guide-images {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 1rem;
         padding: 1rem;
     }
 
     .guide-images img {
-        max-width: 160px;
+        width: 220px;
+        flex: 0 0 220px;
         border-width: 4px; /* Slightly thinner frame on mobile */
-    }
-
-    .guide-images img:only-child {
-        max-width: 220px;
     }
 }
 
 /* Optimization for Iframe on Mobile */
 @media (max-width: 480px) {
     .container {
-        padding: 1.5rem 1rem;
-        margin-top: 4.5rem;
+        padding: 1.2rem 1rem;
+        margin-top: 0.5rem;
     }
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+    .hero {
+        margin-top: 0.5rem;
     }
 }
 
