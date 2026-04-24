@@ -319,19 +319,14 @@ body {
 
 .guide-images {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 1.5rem;
-    margin: 2.5rem 0;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
+    gap: 2rem;
+    margin: 3rem 0;
     background: #FDFBF7;
-    padding: 1.5rem;
+    padding: 2.5rem;
     border-radius: 24px;
     border: 1px dashed var(--border);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
 }
 
 .guide-images::-webkit-scrollbar {
@@ -339,20 +334,16 @@ body {
 }
 
 .guide-images img {
-    width: 260px;
+    width: 280px;
     height: auto;
     border-radius: 30px;
     border: 6px solid #1A1A1A; /* Mock phone frame */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     background: white;
-    flex: 0 0 260px;
-    scroll-snap-align: center;
 }
 
-.guide-images:not(:has(img:nth-child(2))) {
-    justify-content: center;
-}
+
 
 
 .guide-images img:hover {
@@ -503,14 +494,14 @@ body {
     }
 
     .guide-images {
-        gap: 1rem;
-        padding: 1rem;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
     }
 
     .guide-images img {
-        width: 220px;
-        flex: 0 0 220px;
-        border-width: 4px; /* Slightly thinner frame on mobile */
+        width: 100%;
+        max-width: 240px;
+        border-width: 4px;
     }
 }
 
