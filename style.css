@@ -520,3 +520,72 @@ body {
         font-size: 1.8rem;
     }
 }
+
+/* Version Information Card */
+.version-info-card {
+    background: #1A1A1A;
+    color: white;
+    border-radius: 24px;
+    padding: 1.5rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.version-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.version-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #EEE;
+}
+
+.stat-sub {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 0.2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .version-info-card {
+        padding: 1.2rem;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .version-divider {
+        height: 30px;
+    }
+}
+

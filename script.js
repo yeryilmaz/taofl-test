@@ -10,6 +10,10 @@ const translations = {
         "tab-full-guide": "Full Guide",
         "tab-2": "Features",
         "tab-3": "FAQ",
+        "version-label": "VERSION",
+        "build-label": "Build 80",
+        "expires-label": "EXPIRES",
+        "days-unit": "Days",
         "gs-title": "How to Install",
         "step1-title": "Install TestFlight",
         "step1-desc": "Download Apple's TestFlight app from the App Store on your iPhone or iPad.",
@@ -44,6 +48,10 @@ const translations = {
         "tab-full-guide": "Tüm Kılavuz",
         "tab-2": "Özellikler",
         "tab-3": "SSS",
+        "version-label": "SÜRÜM",
+        "build-label": "Yapı 80",
+        "expires-label": "SÜRE",
+        "days-unit": "Gün",
         "gs-title": "Nasıl Yüklenir?",
         "step1-title": "TestFlight'ı Yükleyin",
         "step1-desc": "iPhone veya iPad'inizdeki App Store'dan Apple'ın TestFlight uygulamasını indirin.",
@@ -139,4 +147,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Version fetching logic
+    const fetchLatestVersion = async () => {
+        try {
+            // Using a CORS proxy to fetch TestFlight metadata
+            // Note: In production, it's better to use a dedicated backend or build-time script
+            const tfUrl = 'https://testflight.apple.com/join/zxVEdSqY';
+            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(tfUrl)}`;
+            
+            const response = await fetch(proxyUrl);
+            const data = await response.json();
+            const html = data.contents;
+            
+            // Try to find version and build in the HTML
+            // Apple often embeds this in a JSON blob or specific meta tags
+            // For now, we'll look for common patterns or use fallbacks
+            
+            // Example pattern matching (this may need adjustment based on Apple's exact HTML)
+            const versionMatch = html.match(/version\s*[:=]\s*["']([^"']+)["']/i);
+            const buildMatch = html.match(/build\s*[:=]\s*["']([^"']+)["']/i);
+            
+            if (versionMatch && versionMatch[1]) {
+                document.getElementById('version-number').textContent = versionMatch[1];
+            }
+            if (buildMatch && buildMatch[1]) {
+                document.getElementById('build-label').textContent = `Build ${buildMatch[1]}`;
+            }
+            
+            // Note: If the above parsing fails (as Apple changes layout often), 
+            // the hardcoded values in index.html will remain as defaults.
+        } catch (error) {
+            console.error('Error fetching version info:', error);
+        }
+    };
+
+    fetchLatestVersion();
 });
