@@ -141,7 +141,7 @@ body {
     transform: translateY(-2px);
 }
 
-.apple-icon {
+.apple-icon, .android-icon {
     font-size: 2rem;
     color: var(--text-main);
 }
